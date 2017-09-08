@@ -69,7 +69,9 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
 
     public static final String TAG = "com.unarin.beacon";
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
+    private static final String FOREGROUND_SCAN_PERIOD_NAME = "com.unarin.cordova.beacon.android.altbeacon.ForegroundScanPeriod";
     private static final String FOREGROUND_BETWEEN_SCAN_PERIOD_NAME = "com.unarin.cordova.beacon.android.altbeacon.ForegroundBetweenScanPeriod";
+    private static final int DEFAULT_FOREGROUND_SCAN_PERIOD = 200;
     private static final int DEFAULT_FOREGROUND_BETWEEN_SCAN_PERIOD = 0;
     private static int CDV_LOCATION_MANAGER_DOM_DELEGATE_TIMEOUT = 30;
     private static final int BUILD_VERSION_CODES_M = 23;
@@ -104,6 +106,9 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
 
         final Activity cordovaActivity = cordova.getActivity();
 
+        final int foregroundScanPeriod = this.preferences.getInteger(
+            FOREGROUND_SCAN_PERIOD_NAME, DEFAULT_FOREGROUND_SCAN_PERIOD);
+
         final int foregroundBetweenScanPeriod = this.preferences.getInteger(
                 FOREGROUND_BETWEEN_SCAN_PERIOD_NAME, DEFAULT_FOREGROUND_BETWEEN_SCAN_PERIOD);
 
@@ -111,6 +116,7 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
                 String.valueOf(foregroundBetweenScanPeriod));
 
         iBeaconManager = BeaconManager.getInstanceForApplication(cordovaActivity);
+        iBeaconManager.setForegroundScanPeriod(foregroundScanPeriod);
         iBeaconManager.setForegroundBetweenScanPeriod(foregroundBetweenScanPeriod);
 
         initBluetoothListener();
