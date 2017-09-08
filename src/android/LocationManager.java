@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package com.unarin.cordova.beacon;
+package no.apility.cordova.beacon;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -67,10 +67,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 public class LocationManager extends CordovaPlugin implements BeaconConsumer {
 
-    public static final String TAG = "com.unarin.beacon";
+    public static final String TAG = "no.apility.beacon";
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
-    private static final String FOREGROUND_SCAN_PERIOD_NAME = "com.unarin.cordova.beacon.android.altbeacon.ForegroundScanPeriod";
-    private static final String FOREGROUND_BETWEEN_SCAN_PERIOD_NAME = "com.unarin.cordova.beacon.android.altbeacon.ForegroundBetweenScanPeriod";
+    private static final String FOREGROUND_SCAN_PERIOD_NAME = "BeaconForegroundScanPeriod";
+    private static final String FOREGROUND_BETWEEN_SCAN_PERIOD_NAME = "BeaconForegroundBetweenScanPeriod";
     private static final int DEFAULT_FOREGROUND_SCAN_PERIOD = 200;
     private static final int DEFAULT_FOREGROUND_BETWEEN_SCAN_PERIOD = 0;
     private static int CDV_LOCATION_MANAGER_DOM_DELEGATE_TIMEOUT = 30;
