@@ -1,3 +1,13 @@
+# 3.5.0
+
+## New package name & config options
+* This is a new fork of the plugin, we are expecting to do a lot of work on it, so we have changed the package name, and bumped the version number
+* Update AltBeacon library to 2.12.2 (Android 8 compatible)
+* New config.xml pref "BeaconForegroundScanPeriod" lets you override the foreground scan period on Android
+* New config.xml pref "BeaconForegroundBetweenScanPeriod" lets you override the idle period between forground scans on Android
+* New config.xml pref "NSLocationWhenInUseUsageDescription" lets you customize the dialog for foreground location permission on iOS
+* New config.xml pref "NSLocationAlwaysUsageDescription" lets you customize the dialog for background location permission on iOS
+
 # 3.4.1
 
 ## Backwards Compatibility
