@@ -17,8 +17,8 @@
  under the License.
  */
 
-var _ = require('com.unarin.cordova.beacon.underscorejs');
-var Region = require('com.unarin.cordova.beacon.Region');
+var _ = require('no.apility.cordova.beacon.underscorejs');
+var Region = require('no.apility.cordova.beacon.Region');
 
 /**
  * Constructor for {CLBeaconRegion}.

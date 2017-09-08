@@ -18,15 +18,15 @@
  */
 
 var exec = require('cordova/exec');
-var _ = require('com.unarin.cordova.beacon.underscorejs');
-var Q = require('com.unarin.cordova.beacon.Q');
+var _ = require('no.apility.cordova.beacon.underscorejs');
+var Q = require('no.apility.cordova.beacon.Q');
 
-var Regions = require('com.unarin.cordova.beacon.Regions');
-var Delegate = require('com.unarin.cordova.beacon.Delegate');
+var Regions = require('no.apility.cordova.beacon.Regions');
+var Delegate = require('no.apility.cordova.beacon.Delegate');
 
-var Region = require('com.unarin.cordova.beacon.Region');
-var CircularRegion = require('com.unarin.cordova.beacon.CircularRegion');
-var BeaconRegion = require('com.unarin.cordova.beacon.BeaconRegion');
+var Region = require('no.apility.cordova.beacon.Region');
+var CircularRegion = require('no.apility.cordova.beacon.CircularRegion');
+var BeaconRegion = require('no.apility.cordova.beacon.BeaconRegion');
 
 /**
  * Creates an instance of the plugin.
